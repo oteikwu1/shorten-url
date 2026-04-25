@@ -134,7 +134,7 @@ body {
 
 .input-section {
     max-width: 70%;
-    margin: -70px auto;
+    margin: -70px auto 80px auto;
     background: url(images/bg-shorten-desktop.svg) no-repeat center/cover;
     padding: 2rem 0;
     border-radius: 10px;
@@ -169,6 +169,71 @@ input[type='text'] {
     font-size: 1rem;
     font-weight: bold;
 }
+
+.stat-section {
+    margin: 0 80px;
+}
+
+.stat-heading {
+    text-align: center;
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--main-font);
+    color: var(--Neutral-grey960);
+}
+
+.stat-sub-title {
+    text-align: center;
+    font-family: var(--main-font);
+    color: var(--Neutral-grey500);
+    margin: 1rem 0;
+}
+
+.stats-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1.6rem;
+    margin: 5rem 0;
+    position: relative;
+}
+
+.stats-card-container::before {
+   content: '';
+   height: 4px;
+   left: 0;
+   right: 0;
+    background-color: var(--Primary-blue);
+    position: absolute;
+}
+
+.card1,
+.card2,
+.card3 {
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.card1-imag {
+    height: 70px;
+    aspect-ratio: 1/1;
+    background-color: var(--Neutral-grey960);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -20%;
+}
+
+.card1-heading {
+    margin: 3rem 0 1rem 0;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
 
 
 @media (max-width: 395px) {
