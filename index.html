@@ -10,10 +10,11 @@
 <body>
     <main class="main-container">
         <section class="hero-section">
+
             <div class="nav container">
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="desktop-nav">
             <ul class="nav-links">
-                <li><a href=""> <img src="images/logo.svg" alt="logo.svg"></a></li>
+                <li><a href="#"> <img src="images/logo.svg" alt="logo.svg"></a></li>
                 <li><a href="#">Features</a></li>
                 <li> <a href="#">Pricing</a></li>
                 <li><a href="#">Resources</a></li>
@@ -25,12 +26,15 @@
         </nav>
 
         <!--Mobile Navigation-->
-        <nav class="mobile">
-            <div class="menu-container">
-                <img src="images/logo.svg" alt="">
-                <img src="images/icon-pinterest.svg" alt="">
+        <nav class="mobile-nav" aria-label="mobile-nav">
+            <div class="menu-header">
+                <img src="images/logo.svg" alt="brand logo"
+                class="brand-logo">
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <img src="images/menu.png" alt="Toggle Menu">
+                </button>
             </div>
-            <div class="mobile-container">
+            <div class="mobile-menu-content">
                 <ul class="nav-links">
                     <li><a href="#">Features</a></li>
                     <li> <a href="#">Pricing</a></li>
@@ -51,8 +55,8 @@
                     More than just <br> a shorter links
                 </h1>
                 <p class="hero-sub-heading">
-                    Build a brand recorgniton and get detailed <br>
-                    insight on how your links are perfoming 
+                    Build a brand recognition and get detailed <br>
+                    insight on how your links are performing 
                 </p>
                 <button class="hero-btn">Get Started</button>
             </div>
