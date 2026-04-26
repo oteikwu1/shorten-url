@@ -28,10 +28,12 @@
         <!--Mobile Navigation-->
         <nav class="mobile-nav" aria-label="mobile-nav">
             <div class="menu-header">
+                <div>
                 <img src="images/logo.svg" alt="brand logo"
                 class="brand-logo">
+                </div>
                 <button class="mobile-toggle" aria-label="Toggle Menu">
-                    <img src="images/menu.png" alt="Toggle Menu">
+                    <img src="images/menu.png" class="toggle-menu" alt="Toggle Menu">
                 </button>
             </div>
             <div class="mobile-menu-content">
@@ -71,9 +73,15 @@
 
         <section class="input-section">
             <div class="link-input">
-            <input type="text" placeholder="Shorten a link...">
+            <div class="link-container">
+            <input type="text" placeholder="Shorten a link..." >
+            <p class="error-message">
+              
+            </p>
+            </div>
             <button class="shorten-btn">Shorten it!</button>
             </div>
+
             <div class="display-dontainer">
 
             </div>
