@@ -1,10 +1,24 @@
+const toggleMenu = document.querySelector('.toggle-menu');
+const mobileMenuContainer = document.querySelector('.mobile-menu-content');
+
+toggleMenu.addEventListener('click', () => {
+    mobileMenuContainer.classList.toggle('active')
+});
+
 const input = document.getElementsByTagName('input')[0];
 const errorMessage = document.querySelector('.error-message');
 const shortenBtn = document.querySelector('.shorten-btn');
 const resultContainer = document.querySelector('.result-container');
  const endPoint = 'https://cors-anywhere.herokuapp.com/https://cleanuri.com/api/v1/shorten';
+console.log(resultContainer);
 
+/*
+https://cors-anywhere.herokuapp.com/corsdemo;
 
+if it throws an you click on the above link to 
+gain temporary access to the endpoint
+
+*/
 
 shortenBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -45,7 +59,7 @@ async function shortenLink(urlToShorten) {
         const data = await response.json();
 
         displayLinks(urlToShorten, data.result_url);
-        linkInput.value = ''; 
+        input.value = ''; 
         
     } catch (err) {
         showErrorMessage("Failed to shorten link. Try again.");

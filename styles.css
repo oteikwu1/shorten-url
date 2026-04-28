@@ -134,7 +134,7 @@ body {
 
 .input-section {
     max-width: 70%;
-    margin: -70px auto 80px auto;
+    margin: -70px auto 10px auto;
     background: url(images/bg-shorten-desktop.svg) no-repeat center/cover;
     padding: 2rem 0;
     border-radius: 10px;
@@ -185,6 +185,52 @@ input[type='text'] {
     font-weight: bold;
 }
 
+.result-card {
+    background-color: var(--neutral-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+
+.url-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.original-url {
+    color: var(--primary-purple);
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+.short-url {
+    color: var(--Primary-blue);
+    font-family: var(--main-font);
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.copy-btn {
+    background-color: var(--Primary-blue);
+    color: var(--neutral-white);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-size: 0.9rem;
+    margin: 0 10px;
+}
+
+
 .stat-section {
     margin: 0 80px;
 }
@@ -218,7 +264,7 @@ input[type='text'] {
    height: 4px;
    left: 0;
    right: 0;
-    background-color: var(--Primary-blue);
+   background-color: var(--Primary-blue);
     position: absolute;
 }
 
@@ -460,7 +506,7 @@ input[type='text'] {
         background: url(images/bg-shorten-mobile.svg) no-repeat center/cover;
         max-width: 90%;
         background-color: var(--Neutral-grey900);
-        margin: -90px auto 80px auto;
+        margin: -90px auto 20px auto;
     }
 
     .link-input {
@@ -474,6 +520,31 @@ input[type='text'] {
 
     .shorten-btn {
        min-width: 80%;
+    }
+
+    .url-container {
+        flex-direction: column;
+    }
+
+    .result-card {
+        flex-direction: column;
+    }
+
+    .original-url {
+        border-bottom: 1px solid var(--Neutral-grey400);
+        padding-bottom: 16px;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .short-url {
+        margin-top: 18px;
+    }
+    .copy-btn {
+        width: 100%;
+        margin: 12px 0;
     }
 
     .stat-section {
