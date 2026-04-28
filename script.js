@@ -89,22 +89,3 @@ function copyToClipboard(btn, text) {
         btn.style.backgroundColor = '#3b3054'; 
     });
 };
-
-
-// const menuToggle = document.getElementById('menuToggle');
-// const navWrapper = document.getElementById('navWrapper');
-
-// menuToggle.addEventListener('click', () => {
-//     navWrapper.classList.toggle('active');
-    
- 
-//     const lines = menuToggle.querySelectorAll('.hamburger-line');
-//     lines.forEach(line => line.classList.toggle('open'));
-// });
-
-
-// document.addEventListener('click', (e) => {
-//     if (!menuToggle.contains(e.target) && !navWrapper.contains(e.target)) {
-//         navWrapper.classList.remove('active');
-//     }
-// });
