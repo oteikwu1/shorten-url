@@ -1,14 +1,15 @@
-const linkInput = document.getElementById('input');
+const input = document.getElementsByTagName('input')[0];
 const errorMessage = document.querySelector('.error-message');
 const shortenBtn = document.querySelector('.shorten-btn');
 const resultContainer = document.querySelector('.result-container');
-const endPoint = 'https://cors-anywhere.herokuapp.com/https://cleanuri.com/api/v1/shorten';
+ const endPoint = 'https://cors-anywhere.herokuapp.com/https://cleanuri.com/api/v1/shorten';
+
 
 
 shortenBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
-  const inputValue = linkInput.value.trim();
+  const inputValue = input.value.trim();
 
   if (!inputValue) {
     showErrorMessage('Please add a link');
@@ -19,16 +20,16 @@ shortenBtn.addEventListener('click', (e) => {
 
 function showErrorMessage(err) {
     errorMessage.textContent = err;
-    linkInput.style.border = '2px solid red';
+    input.style.border = '2px solid red';
     errorMessage.style.color = 'red';
 }
 
 function clearErrorMessage() {
-    linkInput.style.border = '';
+    input.style.border = '';
     errorMessage.textContent = '';
 }
 
-linkInput.addEventListener('focus', clearErrorMessage);
+input.addEventListener('focus', clearErrorMessage);
 
 
 async function shortenLink(urlToShorten) {
@@ -50,8 +51,8 @@ async function shortenLink(urlToShorten) {
         showErrorMessage("Failed to shorten link. Try again.");
         console.error(err);
         setTimeout(() => {
-        linkInput.value = ''; 
-        }, 3000)
+        input.value = ''; 
+        }, 2000)
     }
 }
 
@@ -73,23 +74,23 @@ function copyToClipboard(btn, text) {
         btn.textContent = 'Copied!';
         btn.style.backgroundColor = '#3b3054'; 
     });
-}
+};
 
 
-const menuToggle = document.getElementById('menuToggle');
-const navWrapper = document.getElementById('navWrapper');
+// const menuToggle = document.getElementById('menuToggle');
+// const navWrapper = document.getElementById('navWrapper');
 
-menuToggle.addEventListener('click', () => {
-    navWrapper.classList.toggle('active');
+// menuToggle.addEventListener('click', () => {
+//     navWrapper.classList.toggle('active');
     
  
-    const lines = menuToggle.querySelectorAll('.hamburger-line');
-    lines.forEach(line => line.classList.toggle('open'));
-});
+//     const lines = menuToggle.querySelectorAll('.hamburger-line');
+//     lines.forEach(line => line.classList.toggle('open'));
+// });
 
 
-document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !navWrapper.contains(e.target)) {
-        navWrapper.classList.remove('active');
-    }
-});
+// document.addEventListener('click', (e) => {
+//     if (!menuToggle.contains(e.target) && !navWrapper.contains(e.target)) {
+//         navWrapper.classList.remove('active');
+//     }
+// });
