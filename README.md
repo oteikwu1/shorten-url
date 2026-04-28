@@ -8,7 +8,7 @@ A lightweight web application that takes long, clunky URLs and transforms them i
 * **Validation:** Ensures only valid URLs are processed.
 
 ## 🛠️ Tech Stack
-* **Frontend:** HTML, CSS, JavaScript
+* **Frontend:** HTML, CSS, Botsratp and JavaScript
 * **Backend:** /api/v1/shorten (Open APi/Endpoint)
 * **Database:** An open API
 
