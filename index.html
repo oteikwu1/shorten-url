@@ -3,85 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon-32x32.png">
     <title>Shorten url</title>
 </head>
 <body>
     <main class="main-container">
-        <section class="hero-section">
-
-            <div class="nav container">
-            <nav class="desktop-nav" aria-label="desktop-nav">
-            <ul class="nav-links">
-                <li><a href="#"> <img src="images/logo.svg" alt="logo.svg"></a></li>
-                <li><a href="#">Features</a></li>
-                <li> <a href="#">Pricing</a></li>
-                <li><a href="#">Resources</a></li>
-            </ul>
-            <div class="nav-btn">
-                <button class="login-btn">Login</button>
-                <button class="sign-up-btn">Sign Up</button>
-            </div>
-        </nav>
-
-        <!--Mobile Navigation-->
-        <nav class="mobile-nav" aria-label="mobile-nav">
-            <div class="menu-header">
-                <div>
-                <img src="images/logo.svg" alt="brand logo"
-                class="brand-logo">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+    
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg py-4">
+                <div class="container-fluid px-0">
+    
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.svg" alt="Shortly Logo" class="hero-logo">
+                    </a>
+    
+                    <!-- Desktop Navigation -->
+                    <div class="collapse navbar-collapse desktop-nav" id="navbarNav">
+                        <ul class="navbar-nav ms-auto nav-links">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Resources</a>
+                            </li>
+                        </ul>
+    
+                        <div class="nav-btn d-none d-lg-flex align-items-center gap-3 ms-4">
+                            <button class="login-btn btn btn-link">Login</button>
+                            <button class="sign-up-btn btn">Sign Up</button>
+                        </div>
+                    </div>
+    
+                    <!-- Mobile Toggle -->
+                    <button class="navbar-toggler mobile-toggle border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <img src="images/menu.png" alt="Toggle Menu" class="toggle-icon">
+                    </button>
                 </div>
-                <button class="mobile-toggle" aria-label="Toggle Menu">
-                    <img src="images/menu.png" class="toggle-menu" alt="Toggle Menu">
-                </button>
-            </div>
-            <div class="mobile-menu-content">
-                <ul class="nav-links">
-                    <li><a href="#">Features</a></li>
-                    <li> <a href="#">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
-                </ul>
-                <hr>
-                <div class="nav-btn">
-                    <button class="login-btn">Login</button>
-                    <button class="sign-up-btn">Sign Up</button>
+            </nav>
+    
+            <!-- Hero Content -->
+            <div class="hero-content-container row align-items-center gy-5">
+    
+                <!-- Text Content -->
+                <div class="col-lg-6">
+                    <div class="hero-contents">
+                        <h1 class="hero-title">
+                            More than just shorter links
+                        </h1>
+                        <p class="hero-sub-heading">
+                            Build brand recognition and get detailed insights
+                            on how your links are performing.
+                        </p>
+                        <button class="hero-btn btn">Get Started</button>
+                    </div>
                 </div>
+    
+                <!-- Image -->
+                <div class="col-lg-6 text-center text-lg-end">
+                    <img src="images/illustration-working.svg" alt="Illustration working" class="hero-img img-fluid">
+                </div>
+    
             </div>
-        </nav>
         </div>
+    </section>
 
-            <div class="hero-content-container">
-                <div class="hero-contents">
-                <h1 class="hero-title">
-                    More than just <br> a shorter links
-                </h1>
-                <p class="hero-sub-heading">
-                    Build a brand recognition and get detailed <br>
-                    insight on how your links are performing 
-                </p>
-                <button class="hero-btn">Get Started</button>
-            </div>
 
-             <!-- <div class="hero-image">  -->
-             <img src="images/illustration-working.svg"
-             alt="illustration-working" class="hero-img">
-            <!-- </div>  -->
-
+        <section class="shorten-section">
+            <div class="container">
+                <div class="shorten-card">
+                    <div class="row g-3 align-items-center">
+        
+                        <!-- Input Field -->
+                        <div class="col-lg-8">
+                            <div class="link-input-wrapper position-relative">
+                                <input type="text" class="form-control shorten-input" id="linkInput"
+                                    placeholder="Shorten a link here...">
+                                <p class="error-message" id="errorMessage"></p>
+                            </div>
+                        </div>
+        
+                        <!-- Shorten Button -->
+                        <div class="col-lg-4">
+                            <button class="shorten-btn btn w-80">
+                                Shorten It!
+                            </button>
+                        </div>
+        
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="input-section">
-            <div class="link-input">
-            <div class="link-container">
-            <input type="text" placeholder="Shorten a link..." >
-            <p class="error-message">
-              
-            </p>
-            </div>
-            <button class="shorten-btn">Shorten it!</button>
-            </div>
-        </section> 
 
         <section>
             <div class="result-container">
@@ -89,119 +112,147 @@
             </div>
         </section>
 
-        <section class="stat-section">
-            <h3 class="stat-heading">
-                Advance Statistics
-            </h3>
+<section class="stats-section py-5">
+    <div class="container">
 
-            <p class="stat-sub-title">
-                Track how your links are performing across web with
-                <br> our advance statistics dashboard
-            </p>
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="stats-heading">Advance Statistics</h2>
+                <p class="stats-subtitle">
+                    Track how your links are performing across the web with
+                    our advanced statistics dashboard
+                </p>
+            </div>
+        </div>
 
-            <div class="stats-card-container">
-                <div class="card1">
-                    <div class="card1-imag">
-                        <img src="images/icon-brand-recognition.svg" alt="">
+  
+        <div class="stats-cards-wrapper position-relative">
+            <div class="row g-4">
+
+            
+                <div class="col-lg-4 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <img src="images/icon-brand-recognition.svg" alt="Brand Recognition">
+                        </div>
+                        <h3 class="stat-card-title">Brand Recognition</h3>
+                        <p class="stat-card-text">
+                            Boost your brand recognition with each click.
+                            Generic links don't mean a thing. Branded links help
+                            instil confidence in your content.
+                        </p>
                     </div>
-                    <h3 class="card1-heading">
-                        Brand Recognition 
-                    </h3>
-                    <p class="card1-content">
-                        Boost your brand recognition with each click.
-                        Generic links don't mean a thing. Branded help
-                        instil confidence in your content
-                    </p>
                 </div>
 
-                <div class="card2">
-                    <div class="card1-imag">
-                        <img src="images/icon-detailed-records.svg" alt="">
+          
+                <div class="col-lg-4 col-md-6">
+                    <div class="stat-card stat-card-middle">
+                        <div class="stat-icon">
+                            <img src="images/icon-detailed-records.svg" alt="Detailed Records">
+                        </div>
+                        <h3 class="stat-card-title">Detailed Records</h3>
+                        <p class="stat-card-text">
+                            Get insights on who is clicking your links.
+                            Knowing when and where people engage with your
+                            content helps inform better decisions.
+                        </p>
                     </div>
-                    <h3 class="card1-heading">
-                       Detailed Records
-                    </h3>
-                    <p class="card1-content">
-                        Get insight on who is clicking your
-                        links. Knowing when and where people
-                       engage with your content help inform 
-                       better better decision 
-                    </p>
                 </div>
 
-                <div class="card3">
-                    <div class="card1-imag">
-                        <img src="images/icon-fully-customizable.svg" alt="">
+              
+                <div class="col-lg-4 col-md-6">
+                    <div class="stat-card stat-card-last">
+                        <div class="stat-icon">
+                            <img src="images/icon-fully-customizable.svg" alt="Fully Customizable">
+                        </div>
+                        <h3 class="stat-card-title">Fully Customizable</h3>
+                        <p class="stat-card-text">
+                            Improve brand awareness and content discoverability
+                            through customizable links, supercharging audience engagement.
+                        </p>
                     </div>
-                    <h3 class="card1-heading">
-                        Brand Recognition
-                    </h3>
-                    <p class="card1-content">
-                        Boost your brand recognition with each click.
-                        Generic links don't mean a thing. Branded help
-                        instil confidence in your content
-                    </p>
+                </div>
+
+            </div>
+
+    
+            <div class="stats-connector d-none d-lg-block"></div>
+        </div>
+    </div>
+</section>
+       
+        <section class="boost-section py-5 text-center">
+            <div class="container">
+                <div class="boost-content">
+                    <h2 class="boost-title text-white mb-4">
+                        Boost your links today
+                    </h2>
+                    <button class="boost-btn btn btn-primary rounded-pill px-4 py-2">
+                        Get Started
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section class="boost-link">
-            <h2 class="boost-link-title">
-                Boost your links today
-            </h2>
-            <button class="boost-link-btn">Get Started</button>
-        </section>
-
+        
         <footer class="home-footer">
-            <div class="footer-container">
-                <div><img src="images/logo.svg"  class="footer-logo"
-                    alt="footer logo"></div>
-                <div>
-                <h3 class="footer-link-title">
-                    Feature
-                </h3>
-                <ul  class="footer-links">
-                    <li><a href="#">Link Shortening</a></li>
-                    <li><a href="#">Branded Links</a></li>
-                    <li><a href="#">Analytics</a></li>
-                </ul>
+    <div class="footer-container py-5">
+        <div class="container">
+            <div class="row gy-5">
+
+                <div class="col-lg-3 col-md-6 text-center text-md-start">
+                    <img src="images/logo.svg" 
+                         class="footer-logo" 
+                         alt="Shortly logo">
                 </div>
 
-                <div>
-                    <h3 class="footer-link-title">
-                       Resources
-                    </h3>
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="footer-link-title">Features</h3>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Link Shortening</a></li>
+                        <li><a href="#">Branded Links</a></li>
+                        <li><a href="#">Analytics</a></li>
+                    </ul>
+                </div>
 
-                    <ul  class="footer-links">
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="footer-link-title">Resources</h3>
+                    <ul class="footer-links list-unstyled">
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Developer</a></li>
+                        <li><a href="#">Developers</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
 
-                <div>
-                    <h3 class="footer-link-title">
-                      Company
-                    </h3>
-                    <ul class="footer-links">
+
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="footer-link-title">Company</h3>
+                    <ul class="footer-links list-unstyled">
                         <li><a href="#">About</a></li>
                         <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Career</a></li>
-                         <li><a href="#">Career</a></li>
+                        <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                    </ul>
                 </div>
-                <div class="social-icon">
-                    <img src="images/icon-facebook.svg" alt="">
-                    <img src="images/icon-twitter.svg" alt="">
-                    <img src="images/icon-pinterest.svg" alt="">
-                    <img src="images/icon-instagram.svg" alt="">
+
+                <div class="col-lg-3 col-md-6 text-center text-md-end">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="Pinterest"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+                        <a href="#" aria-label="Instagram"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+                    </div>
                 </div>
+
             </div>
-        </footer>
+        </div>
+    </div>
+</footer>
     </main>
 
     <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>

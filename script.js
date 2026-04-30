@@ -1,8 +1,8 @@
-const toggleMenu = document.querySelector('.toggle-menu');
-const mobileMenuContainer = document.querySelector('.mobile-menu-content');
+const toggleIcon = document.querySelector('.toggle-icon');
+const containerFluid = document.querySelector('.container-fluid');
 
-toggleMenu.addEventListener('click', () => {
-    mobileMenuContainer.classList.toggle('active')
+toggleIcon.addEventListener('click', () => {
+containerFluid.classList.toggle('active');
 });
 
 const input = document.getElementsByTagName('input')[0];
