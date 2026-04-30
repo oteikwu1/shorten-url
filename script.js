@@ -1,17 +1,16 @@
-const toggleIcon = document.querySelector('.toggle-icon');
-const containerFluid = document.querySelector('.container-fluid');
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenuPanel = document.querySelector('.mobile-menu-panel');
 
-toggleIcon.addEventListener('click', () => {
-containerFluid.classList.toggle('active');
+menuToggle.addEventListener('click', () => {
+    mobileMenuPanel.classList.toggle('active');
 });
 
-const input = document.getElementsByTagName('input')[0];
-const errorMessage = document.querySelector('.error-message');
+const linkInput = document.getElementById('linkInput');
+const errorMessage = document.getElementById('errorMessage');
 const shortenBtn = document.querySelector('.shorten-btn');
 const resultContainer = document.querySelector('.result-container');
  const endPoint = 'https://cors-anywhere.herokuapp.com/https://cleanuri.com/api/v1/shorten';
-
-
+console.log(endPoint);
 /*
 https://cors-anywhere.herokuapp.com/corsdemo;
 
@@ -23,7 +22,7 @@ gain temporary access to the endpoint
 shortenBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
-  const inputValue = input.value.trim();
+  const inputValue = linkInput.value.trim();
 
   if (!inputValue) {
     showErrorMessage('Please add a link');
@@ -34,17 +33,16 @@ shortenBtn.addEventListener('click', (e) => {
 
 function showErrorMessage(err) {
     errorMessage.textContent = err;
-    input.style.border = '2px solid red';
+    linkInput.style.border = '2px solid red';
     errorMessage.style.color = 'red';
 }
 
 function clearErrorMessage() {
-    input.style.border = '';
+    linkInput.style.border = '';
     errorMessage.textContent = '';
 }
 
-input.addEventListener('focus', clearErrorMessage);
-
+linkInput.addEventListener('focus', clearErrorMessage);
 
 async function shortenLink(urlToShorten) {
     try {
@@ -59,13 +57,13 @@ async function shortenLink(urlToShorten) {
         const data = await response.json();
 
         displayLinks(urlToShorten, data.result_url);
-        input.value = ''; 
+        linkInput.value = ''; 
         
     } catch (err) {
         showErrorMessage("Failed to shorten link. Try again.");
         console.error(err);
         setTimeout(() => {
-        input.value = ''; 
+        linkInput.value = ''; 
         }, 2000)
     }
 }
