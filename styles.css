@@ -135,11 +135,12 @@ body {
 
 .input-section {
     max-width: 70%;
-    margin: -70px auto 10px auto;
+    margin: -70px auto 170px auto;
     background: url(images/bg-shorten-desktop.svg) no-repeat center/cover;
     padding: 2rem 0;
     border-radius: 10px;
     background-color: var(--Neutral-grey900);
+    position: relative;
 }
 
 .link-input {
@@ -147,7 +148,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    position: relative;
+   
 }
 
 input[type='text'] {
@@ -164,6 +165,7 @@ input[type='text'] {
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    position: relative;
 }
 
 .error-message {
@@ -196,6 +198,10 @@ input[type='text'] {
     padding: 20px 10px;
     border-radius: 8px;
     margin-bottom: 6rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:  -220px;
 }
 
 .url-container {
@@ -508,12 +514,14 @@ input[type='text'] {
         background: url(images/bg-shorten-mobile.svg) no-repeat center/cover;
         width: 90%;
         background-color: var(--Neutral-grey900);
-        margin: -90px auto 20px auto;
+        margin: -70px auto 220px auto;
+     
     }
 
     .link-input {
         flex-direction: column;
         width: 100%;
+        position: relative;
     }
 
    input[type='text']  {
@@ -538,6 +546,11 @@ input[type='text'] {
 
     .result-card {
         flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom:  -600px;
+        /* margin-bottom: 100px; */
     }
 
     .original-url {
@@ -558,7 +571,7 @@ input[type='text'] {
     }
 
     .stat-section {
-    margin: 0 20px;
+    margin: 90px 20px 0 20px;
   }
 
     .stat-sub-title {
@@ -573,7 +586,6 @@ input[type='text'] {
 
 .stats-card-container {
     grid-template-columns: 1fr;
-    position: relative;
     z-index: 100;
 }
 

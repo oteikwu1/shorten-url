@@ -10,7 +10,7 @@ const errorMessage = document.querySelector('.error-message');
 const shortenBtn = document.querySelector('.shorten-btn');
 const resultContainer = document.querySelector('.result-container');
  const endPoint = 'https://cors-anywhere.herokuapp.com/https://cleanuri.com/api/v1/shorten';
-console.log(resultContainer);
+
 
 /*
 https://cors-anywhere.herokuapp.com/corsdemo;
